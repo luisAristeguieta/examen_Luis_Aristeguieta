@@ -3,7 +3,7 @@ package com.kakredev.examen.entidades;
 public class VendedorComision extends Vendedor {
 
 	public VendedorComision(String cedula) {
-		super(cedula);
+		super(cedula, "C");
 	}
 
 	@Override

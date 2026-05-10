@@ -9,11 +9,11 @@ public class TestAdmin {
 
 	public static void main(String[] args) {
 
-		// Se Crea 3 tipos de vendedores, agrega a la admninitracion e imprimo 
+		// Se Crea 3 tipos de vendedores, agrega a la admninitracion e imprimo
 		AdminVentas admin = new AdminVentas();
-		Vendedor vendedor = new Vendedor("1757124670");
+		Vendedor vendedor = new Vendedor("1757124670","V");
 		vendedor.setSueldoFijo(500); // nomal
-		
+
 		VendedorComision vendedorComision = new VendedorComision("1757124671"); // v comision
 		vendedorComision.setNumeroVentas(10);
 		vendedorComision.setComisionPorVenta(50);
@@ -29,8 +29,12 @@ public class TestAdmin {
 		System.out.println(admin.calcularSueldo("1757124670"));
 		System.out.println(admin.calcularSueldo("1757124671"));
 		System.out.println(admin.calcularSueldo("1757124672"));
-	
+
 		System.out.println(admin.calcularSueldo("0"));
+
+		//
+		Vendedor vendedorSinDatos = new Vendedor("1757124670","V");
+		System.out.println(vendedorSinDatos.getCedula());
 
 	}
 
