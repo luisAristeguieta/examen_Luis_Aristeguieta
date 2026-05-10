@@ -1,0 +1,170 @@
+{
+  "info": {
+    "_postman_id": "62909798-5969-468c-bc23-0bf43a24c0ad",
+    "name": "Vendedor",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50753649",
+    "_collection_link": "https://go.postman.co/collection/50753649-62909798-5969-468c-bc23-0bf43a24c0ad?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Crear Vendedor Normal",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cedula\": \"1757124670\",\r\n    \"tipo\": \"V\",\r\n    \"numeroVentas\": 5,\r\n    \"sueldoFijo\": 500,\r\n    \"comisionPorVenta\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/vendedores",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vendedores"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Vendedor Mixto",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cedula\": \"1757124672\",\r\n    \"tipo\": \"M\",\r\n    \"numeroVentas\": 10,\r\n    \"sueldoFijo\": 500,\r\n    \"comisionPorVenta\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/vendedores",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vendedores"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Vendedo Comercial",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cedula\": \"1757124671\",\r\n    \"tipo\": \"C\",\r\n    \"numeroVentas\": 10,\r\n    \"sueldoFijo\": 0,\r\n    \"comisionPorVenta\": 50\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/vendedores",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vendedores"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calcular Sueldo Nomal",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vendedores/1757124670",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vendedores",
+            "1757124670"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calcular Sueldo Mixto",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vendedores/1757124672",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vendedores",
+            "1757124672"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calcular Sueldo Comercial",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vendedores/1757124671",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vendedores",
+            "1757124671"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
